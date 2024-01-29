@@ -6,7 +6,6 @@ import Albume from "../../Pages/Albmue";
 import Songs from "../../Pages/Songs";
 import AlbumSong from "../AlbumComponets/AlbumSong";
 import AudioPlayer from "../MusicPlayer.jsx/AudioPlayer";
-import PlaylistSongs from "../PlaylistComponets/PlaylistSongs";
 import Talbume from "../AlbumComponets/Talbume";
 import MobileMenu from "../LeftBox/MoblieMenu";
 import Mobilelogo from "../LeftBox/Mobilelogo";
@@ -23,7 +22,6 @@ const RightSide = () => {
             <Route path="/albume" element={<Albume />} />
             <Route path="/albumsong" element={<AlbumSong />} />
             <Route path="/audioplayer" element={<AudioPlayer />} />
-            <Route path="/playlistsong" element={<PlaylistSongs />} />
             <Route path="/talbume/:id" element={<Talbume />} />
           </Routes>
         </div>
