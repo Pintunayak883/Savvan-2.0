@@ -38,6 +38,7 @@ const Talbume = () => {
                   artist={item.primaryArtists}
                   count={item.playCount}
                   icon={<FaHeadphones />}
+                  song={item.downloadUrl[4].link}
                 />
               </div>
             );

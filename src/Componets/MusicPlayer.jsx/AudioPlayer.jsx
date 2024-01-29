@@ -1,18 +1,16 @@
 import React, { useState, useRef, useEffect } from "react";
 import { FaPlay, FaPause, FaStepForward, FaStepBackward } from "react-icons/fa";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import Slider from "rc-slider";
 import "rc-slider/assets/index.css";
-import { prevSong, nextSong } from "../../Redux/MusicCardSlice";
+
 const AudioPlayer = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const audioRef = useRef(null);
-  const { name, img, song, artist } = useSelector(
-    (state) => state.Music.currentSong
-  );
-  const dispatch = useDispatch();
+  const { name, img, song, artist } = useSelector((state) => state.Music.Music);
+
   const handlePlayPause = () => {
     if (isPlaying) {
       audioRef.current.pause();

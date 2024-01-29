@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const MusicSlice = createSlice({
   name: "Music",
   initialState: {
-    currentSong: {
+    Music: {
       name: "Bekhayali",
       img: "https://c.saavncdn.com/807/Kabir-Singh-Hindi-2019-20190614075009-500x500.jpg",
       song: "https://aac.saavncdn.com/807/1ad57f8c99bc8c1623964b1b922e44f4_320.mp4",
@@ -12,10 +12,10 @@ const MusicSlice = createSlice({
   },
   reducers: {
     setMusic: (state, action) => {
-      state.currentSong = action.payload;
+      state.Music = action.payload;
     },
   },
 });
 
-export const { setMusic, nextSong, prevSong } = MusicSlice.actions;
+export const { setMusic } = MusicSlice.actions;
 export default MusicSlice.reducer;

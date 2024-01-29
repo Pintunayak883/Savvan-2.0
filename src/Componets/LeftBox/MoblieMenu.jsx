@@ -20,7 +20,7 @@ export default function MobileMenu() {
           {Menudata.map((item, index) => (
             <NavLink key={index} to={item.path} className="mx-3">
               <BottomNavigationAction
-                className="text-3xl"
+                className="text-2xl"
                 label={item.name}
                 icon={item.icon}
               />
